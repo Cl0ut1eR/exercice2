@@ -1,5 +1,16 @@
 #include "heure.h"
 
+Heure::Heure()
+{
+	heure = 0;
+	minute = 0;
+}
+
+Heure::Heure(int inHeure, int inMinutes)
+{
+	heure = inHeure;
+	minute = inMinutes;
+}
 
 int Heure::getHeure() const
 {

@@ -10,8 +10,14 @@ class Heure
     int heure;
     int minute;
   public:
+	 Heure();
+	 Heure(int Heure, int Minutes);
+
+
     int getHeure() const;
 	int getMinute() const;
+
+
 	void FixerHeure(int inHeure, int inMinute);
 };
 #endif

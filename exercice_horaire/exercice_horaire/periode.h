@@ -11,10 +11,19 @@ class Periode
 {
   private:
 	string titrePeriode;
+	Heure HeureDebut;
+	Heure HeureFin;
   public:
+	  Periode();
+
+
 	string getTitre();
+	int getHeureDebut() const;
+	int getMinuteDebut() const;
+	int getHeureFin() const;
+	int getMinuteFin() const;
+
+
 	void setTitre(string);
-
-
 };
 #endif
