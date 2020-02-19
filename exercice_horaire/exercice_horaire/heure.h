@@ -16,6 +16,7 @@ class Heure
 
     int getHeure() const;
 	int getMinute() const;
+	string getHeureComplete() const;
 
 
 	void FixerHeure(int inHeure, int inMinute);

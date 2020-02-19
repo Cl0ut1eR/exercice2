@@ -19,12 +19,15 @@ class Periode
 	  Periode(const Periode&);
 
 	  /*get le titre de la période*/
-	string getTitre();
+	string getTitre() const;
 
 	int getHeureDebut() const;
 	int getMinuteDebut() const;
 	int getHeureFin() const;
 	int getMinuteFin() const;
+	string getHeureCompleteDebut() const;
+	string getHeureCompleteFin() const;
+	float getTempsPeriode() const;
 
 	/*get le texte de détail*/
 	string getTexte() const;

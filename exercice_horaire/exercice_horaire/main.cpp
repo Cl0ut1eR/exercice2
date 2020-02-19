@@ -86,8 +86,9 @@ void AfficherHoraire()
 void AfficherPeriode(Periode inPeriode)
 {
 	cout << inPeriode.getTitre() << "\n";
-	cout << "De " << inPeriode.getHeureDebut() << ":" << inPeriode.getMinuteDebut() << " à " << inPeriode.getHeureFin() << ":" << inPeriode.getMinuteFin() << "\n";
-	cout << "Par " << inPeriode.getTexte() << " au local " << inPeriode.getEmplacement()<<"\n\n";
+	cout << "De " << inPeriode.getHeureCompleteDebut() << " à " << inPeriode.getHeureCompleteFin() << "\n";
+	cout << "Par " << inPeriode.getTexte() << " au local " << inPeriode.getEmplacement()<<"\n";
+	cout << "Dure du cour : " << inPeriode.getTempsPeriode()<<" heures\n\n";
 }
 
 void GetPeriodesPour1Jour(std::vector<Periode*>* TabDesPeriodes,int inJour)

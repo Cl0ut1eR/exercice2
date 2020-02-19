@@ -17,10 +17,26 @@ Periode::Periode(const Periode& inPeriode)
 
 #pragma region Get
 
-string Periode::getTitre()
+string Periode::getTitre() const
 {
   return titrePeriode;
 }
+float Periode::getTempsPeriode() const
+{
+	float Minutes = getMinuteFin() - getMinuteDebut();
+	float Heures = getHeureFin() - getHeureDebut();
+	if (Minutes < 0)
+	{
+		Heures--;
+		Minutes += 60;
+	}
+	Heures=(Heures + (Minutes / 60)) * 100;
+	int H2 = Heures;
+	Heures =  H2;
+	Heures = Heures / 100;
+	return Heures;
+}
+
 
 //----------heure------------
 
@@ -42,6 +58,15 @@ int Periode::getHeureFin() const
 int Periode::getMinuteFin() const
 {
 	return HeureFin.getMinute();
+}
+
+string Periode::getHeureCompleteDebut() const
+{
+	return HeureDebut.getHeureComplete();
+}
+string Periode::getHeureCompleteFin() const
+{
+	return HeureFin.getHeureComplete();
 }
 //-------detail-----------
  string Periode::getTexte() const

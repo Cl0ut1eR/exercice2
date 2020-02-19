@@ -8,8 +8,23 @@ Heure::Heure()
 
 Heure::Heure(int inHeure, int inMinutes)
 {
+	if (inHeure <= 24 && inHeure >= 0)
+	{
 	heure = inHeure;
-	minute = inMinutes;
+	}
+	else
+	{
+		heure =0;
+	}
+
+	if(inMinutes>=0&&inMinutes<=60)
+	{
+		minute = inMinutes;
+	}
+	else 
+	{
+		minute = inMinutes;
+	}
 }
 
 int Heure::getHeure() const
@@ -22,9 +37,35 @@ int Heure::getMinute() const
   return minute;
 }
 
-void Heure::FixerHeure(int inHeure, int inMinute)
+string Heure::getHeureComplete() const
 {
-	heure = inHeure;
-	minute = inMinute;
+	
+	string heureComplete = "";
+
+	if (heure < 10)
+	{
+		heureComplete += "0";
+	}
+	heureComplete += to_string(heure)+":";
+	if(minute<10)
+	{
+		heureComplete += "0";
+	}
+	heureComplete += to_string(minute);
+	return heureComplete;
+}
+
+
+void Heure::FixerHeure(int inHeure, int inMinutes)
+{
+	if (inHeure <= 24 && inHeure >= 0)
+	{
+		heure = inHeure;
+	}
+
+	if (inMinutes >= 0 && inMinutes <= 60)
+	{
+		minute = inMinutes;
+	}
 }
 
