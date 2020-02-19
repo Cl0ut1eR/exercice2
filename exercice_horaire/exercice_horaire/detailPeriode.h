@@ -11,6 +11,8 @@ class Detail
 	string texteDetail;
     string emplacement;
   public:
+	Detail();
+
 	string getTexte() const;
 	string getEmplacement() const;
 

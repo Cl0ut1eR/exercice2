@@ -1,5 +1,12 @@
 #include "detailPeriode.h"
 
+Detail::Detail()
+{
+	texteDetail = "";
+	emplacement = "";
+}
+
+
 string Detail::getTexte() const
 {
   return texteDetail;
