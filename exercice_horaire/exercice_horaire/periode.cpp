@@ -6,18 +6,14 @@ Periode::Periode():HeureDebut(), HeureFin(), Detail()
 
 }
 
-Periode::Periode(const Periode& inPeriode) : Detail()
+Periode::Periode(const Periode& inPeriode)
 {
 	titrePeriode = inPeriode.titrePeriode;
 	HeureDebut = inPeriode.HeureDebut;
 	HeureFin = inPeriode.HeureFin;
+	Detail = inPeriode.Detail;
 }
 
-
-
-
-void setTexte(string);
-void setEmplacement(string);
 
 #pragma region Get
 
@@ -50,11 +46,11 @@ int Periode::getMinuteFin() const
 //-------detail-----------
  string Periode::getTexte() const
 {
-	 Detail.getTexte();
+	 return Detail.getTexte();
 }
  string Periode::getEmplacement()const
 {
-	 Detail.getEmplacement();
+	 return Detail.getEmplacement();
 }
 
 #pragma endregion
@@ -76,4 +72,14 @@ void Periode::FixerFinPeriode(int inHeure, int inMinutes)
 {
 	HeureFin.FixerHeure(inHeure, inMinutes);
 }
+//-------detail-----------
+void Periode::setTexte(string inTexte)
+{
+	Detail.setTexte(inTexte);
+}
+void Periode::setEmplacement(string inEmplacement)
+{
+	Detail.setEmplacement(inEmplacement);
+}
+
 #pragma endregion
